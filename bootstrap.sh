@@ -69,5 +69,5 @@ echo "-- Setup databases --"
 mysql -uroot -proot -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root' WITH GRANT OPTION; FLUSH PRIVILEGES;"
 mysql -uroot -proot -e "CREATE DATABASE dev_database";
 
-wget -O /vagrant/mysql_database.sql "http://ec2-18-144-70-218.us-west-1.compute.amazonaws.com/thedb.sql"
+wget -O /vagrant/mysql_database.sql "http://www.dbhost.com/thedb.sql"
 sudo mysql -uroot -proot dev_database < /vagrant/mysql_database.sql
